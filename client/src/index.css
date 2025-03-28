@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .maparea {
+    min-height: 300px;
+  }
+  
+  /* Estilos para o mapa Leaflet */
+  .leaflet-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .left-1\/8 {
+    left: 12.5%;
+  }
+  
+  .left-3\/8 {
+    left: 37.5%;
+  }
+  
+  .left-5\/8 {
+    left: 62.5%;
+  }
+  
+  .left-7\/8 {
+    left: 87.5%;
+  }
+  
+  .top-1\/8 {
+    top: 12.5%;
+  }
+  
+  .top-3\/8 {
+    top: 37.5%;
+  }
+  
+  .top-5\/8 {
+    top: 62.5%;
+  }
+  
+  .top-7\/8 {
+    top: 87.5%;
+  }
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(37, 99, 235, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+    }
+  }
+
+  .rider-panel {
+    height: calc(100vh - 70px);
+  }
+}
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 222.2 47.4% 11.2%;
+  
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  
+  --secondary: 152 60% 40%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 38 92% 50%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --ring: 215 20.2% 65.1%;
+  
+  --radius: 0.5rem;
+  
+  --chart-1: 222.2 47.4% 11.2%;
+  --chart-2: 152 60% 40%;
+  --chart-3: 38 92% 50%;
+  --chart-4: 0 100% 50%;
+  --chart-5: 215 20.2% 65.1%;
+  
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 222.2 47.4% 11.2%;
+  --sidebar-primary: 222.2 47.4% 11.2%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 38 92% 50%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 214.3 31.8% 91.4%;
+  --sidebar-ring: 215 20.2% 65.1%;
+}
